@@ -142,8 +142,8 @@ print("_________________Overall Scoring________________________________________"
 print("You have won a total of  {} games .".format(winningsreal))
 print("The bot has won a total of {} games .".format((winningsbot)))
 print("___________________ Winner is!___________________________________________")
-winner = checkfinalwinner(winningsreal,winningsbot) #Calling the function checkfinalwinner to get the winner !
-print(winner)
+winner = checkfinalwinner(winningsreal,winningsbot) #Calling the function checkfinalwinner to get the overall   winner depending on the highest score.
+print(winner)#Printing the winner 
 print("------------------------Thank You for Playing Dice Mania------------------")
 
 
