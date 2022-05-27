@@ -30,8 +30,24 @@ class Dice:
 
 
 
+def getsides():
+    sides = int(input("How many sides do you want the dice to have "))
 
-obj = Dice(6) #Creating an object to call methods and athributes  from the Dice  class. Also included customization which allows the user to change the sides of the dice according to their choice
+    return sides
+
+
+sides = getsides()
+
+
+
+
+
+obj = Dice(sides) #Creating an object to call methods and athributes  from the Dice  class. Also included customization which allows the user to change the sides of the dice according to their choice
+
+
+
+    
+
 
 
 def welcome():
@@ -43,8 +59,7 @@ welcome()
 
 playername = input("What would you like the program to call you as?")
 
-
-randombotnames = ["Funkyman123","PerryPicker","Market23","Joseph123","iambetterthanyou"]
+randombotnames = ["Funkyman123", "PerryPicker", "Market23", "Joseph123", "iambetterthanyou"]
 botname = random.choice(randombotnames)
 #Randomly picks a name for the bot from the list of names  using the choice method from the random class.
 
@@ -115,7 +130,7 @@ print("_________________Overall Scoring________________________________________"
 print("You have won a total of  {} games .".format(winningsreal))
 print("The bot has won a total of {} games .".format((winningsbot)))
 print("___________________ Winner is!___________________________________________")
-winner = checkfinalwinner(winningsreal,winningsbot)
+winner = checkfinalwinner(winningsreal,winningsbot) #Calling the function checkfinalwinner to get the winner !
 print(winner)
 print("------------------------Thank You for Playing Dice Mania------------------")
 
