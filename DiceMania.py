@@ -7,6 +7,9 @@ import random
 
 class Dice:
 
+    randombotsnames = None
+    randombotslist = None
+
 
 
     def __init__(self,randomsides):
@@ -25,6 +28,13 @@ class Dice:
     def roll(self):
 
      return random.randint(1,self.sides)
+
+    def randombotname(self):
+        self.randombotslist = ["Tony","Anothony","Mark","Iamabot","iambetter"]
+        self.randombotsnames = random.choice(self.randombotslist)
+
+        return self.randombotsnames
+
 
 
 
@@ -46,6 +56,7 @@ obj = Dice(sides) #Creating an object to call methods and athributes  from the D
 
 
 
+
     
 
 
@@ -59,8 +70,9 @@ welcome()
 
 playername = input("What would you like the program to call you as?")
 
-randombotnames = ["Funkyman123", "PerryPicker", "Market23", "Joseph123", "iambetterthanyou"]
-botname = random.choice(randombotnames)
+
+
+randombotname = obj.randombotname()
 #Randomly picks a name for the bot from the list of names  using the choice method from the random class.
 
 
@@ -76,7 +88,7 @@ def checkfinalwinner(playerscore,botscore):
         return "The overall winner is {} ! ".format(playername)
 
     elif playerscore < botscore:
-        return "Game Over, Unfortunately  the bot  {} has won the game. ".format(botname)
+        return "Game Over, Unfortunately  the bot  {} has won the game. ".format(randombotname)
     else:
         return  "The Game is a tie. No one is a winner"
 
